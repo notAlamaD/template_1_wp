@@ -64,6 +64,9 @@ function fin_economy_assets() {
     $header_bg   = get_theme_mod('fin_economy_header_bg_color', '#ffffff');
     $header_text = get_theme_mod('fin_economy_header_text_color', '#0f172a');
     $accent      = get_theme_mod('fin_economy_accent_color', '#2563eb');
+    $button_bg   = get_theme_mod('fin_economy_button_bg_color', $accent);
+    $button_text = get_theme_mod('fin_economy_button_text_color', '#ffffff');
+    $button_hover = get_theme_mod('fin_economy_button_hover_color', '#1d4ed8');
     $footer_bg   = get_theme_mod('fin_economy_footer_bg_color', '#0b1220');
     $footer_text = get_theme_mod('fin_economy_footer_text_color', '#e2e8f0');
 
@@ -71,7 +74,7 @@ function fin_economy_assets() {
     $hero_border  = fin_economy_hex_to_rgba($hero_text, 0.18);
 
     $custom_css = sprintf(
-        ':root{--hero-bg-start:%1$s;--hero-bg-end:%2$s;--hero-text:%3$s;--hero-surface:%4$s;--hero-border:%5$s;--header-bg:%6$s;--header-text:%7$s;--header-border:rgba(15,23,42,0.08);--header-muted:rgba(15,23,42,0.55);--accent:%8$s;--footer-bg:%9$s;--footer-text:%10$s;--footer-border:rgba(255,255,255,0.08);} .site-header{background:%6$s;color:%7$s;} .site-footer{background:%9$s;color:%10$s;}',
+        ':root{--hero-bg-start:%1$s;--hero-bg-end:%2$s;--hero-text:%3$s;--hero-surface:%4$s;--hero-border:%5$s;--header-bg:%6$s;--header-text:%7$s;--header-border:rgba(15,23,42,0.08);--header-muted:rgba(15,23,42,0.55);--accent:%8$s;--button-bg:%11$s;--button-text:%12$s;--button-hover:%13$s;--footer-bg:%9$s;--footer-text:%10$s;--footer-border:rgba(255,255,255,0.08);} .site-header{background:%6$s;color:%7$s;} .site-footer{background:%9$s;color:%10$s;}',
         esc_html($hero_bg_start),
         esc_html($hero_bg_end),
         esc_html($hero_text),
@@ -81,7 +84,10 @@ function fin_economy_assets() {
         esc_html($header_text),
         esc_html($accent),
         esc_html($footer_bg),
-        esc_html($footer_text)
+        esc_html($footer_text),
+        esc_html($button_bg),
+        esc_html($button_text),
+        esc_html($button_hover)
     );
 
     wp_add_inline_style('fin-economy-style', $custom_css);
@@ -191,6 +197,36 @@ function fin_economy_customize_register($wp_customize) {
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'fin_economy_accent_color', [
         'label'   => __('Accent color', 'fin-economy'),
         'section' => 'colors',
+    ]));
+
+    $wp_customize->add_setting('fin_economy_button_bg_color', [
+        'default'           => '#2563eb',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ]);
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'fin_economy_button_bg_color', [
+        'label'       => __('Button background color', 'fin-economy'),
+        'description' => __('Applies to primary buttons and hero CTAs.', 'fin-economy'),
+        'section'     => 'colors',
+    ]));
+
+    $wp_customize->add_setting('fin_economy_button_hover_color', [
+        'default'           => '#1d4ed8',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ]);
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'fin_economy_button_hover_color', [
+        'label'       => __('Button hover color', 'fin-economy'),
+        'description' => __('Used for hover and focus states.', 'fin-economy'),
+        'section'     => 'colors',
+    ]));
+
+    $wp_customize->add_setting('fin_economy_button_text_color', [
+        'default'           => '#ffffff',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ]);
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'fin_economy_button_text_color', [
+        'label'       => __('Button text color', 'fin-economy'),
+        'description' => __('Adjust label contrast for buttons sitewide.', 'fin-economy'),
+        'section'     => 'colors',
     ]));
 
     $wp_customize->add_section('fin_economy_footer_section', [
