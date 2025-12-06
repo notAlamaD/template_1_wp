@@ -146,28 +146,28 @@ img { max-width: 100%; height: auto; display: block; }
   grid-template-columns: 2fr 1fr;
   gap: 20px;
   padding: 24px;
-  background: linear-gradient(135deg, #0f172a, #1e3a8a);
-  color: #e2e8f0;
+  background: linear-gradient(135deg, var(--hero-bg-start, #0f172a), var(--hero-bg-end, #1e3a8a));
+  color: var(--hero-text, #e2e8f0);
   border-radius: 16px;
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
 }
 .hero-featured { display: grid; gap: 12px; }
 .hero-thumb img { border-radius: 12px; width: 100%; height: auto; object-fit: cover; }
-.hero-title { margin: 0; font-size: 2rem; color: #fff; }
+.hero-title { margin: 0; font-size: 2rem; color: var(--hero-text, #e2e8f0); }
 .hero-title a { color: inherit; }
-.hero-excerpt { margin: 0; opacity: 0.9; }
-.hero-meta { display: flex; gap: 10px; align-items: center; font-weight: 600; }
+.hero-excerpt { margin: 0; opacity: 0.9; color: var(--hero-text, #e2e8f0); }
+.hero-meta { display: flex; gap: 10px; align-items: center; font-weight: 600; color: var(--hero-text, #e2e8f0); }
 
 .hero-accents { display: grid; gap: 12px; }
 .accent-card {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--hero-surface, rgba(255, 255, 255, 0.06));
+  border: 1px solid var(--hero-border, rgba(255, 255, 255, 0.12));
   border-radius: 12px;
   padding: 12px 14px;
   display: grid;
   gap: 6px;
 }
-.accent-title { margin: 0; color: #ffffff; font-size: 1.05rem; }
+.accent-title { margin: 0; color: var(--hero-text, #e2e8f0); font-size: 1.05rem; }
 .accent-thumb img { border-radius: 10px; }
 
 .content-grid { display: grid; grid-template-columns: minmax(0, 2fr) 320px; gap: 24px; margin-top: 32px; }
@@ -190,6 +190,7 @@ img { max-width: 100%; height: auto; display: block; }
 .post-info { padding: 14px 16px 16px; display: grid; gap: 8px; }
 .post-meta-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; font-size: 0.92rem; color: #475569; }
 .meta-text { color: #cbd5e1; font-size: 0.9rem; }
+.hero .meta-text { color: var(--hero-text, #e2e8f0); opacity: 0.82; }
 .badge { background: rgba(37, 99, 235, 0.12); color: #0f52ba; border-radius: 999px; padding: 4px 10px; font-weight: 700; font-size: 0.85rem; }
 .post-title { margin: 0; font-size: 1.1rem; }
 .post-title a { color: #0f172a; }
