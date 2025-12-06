@@ -9,16 +9,20 @@
 <header class="site-header">
     <div class="header-inner">
         <div class="brand">
-            <a class="site-title" href="<?php echo esc_url(home_url('/')); ?>">Global Bulletin</a>
+            <?php if (function_exists('the_custom_logo') && has_custom_logo()) : ?>
+                <div class="site-title logo-only"><?php the_custom_logo(); ?></div>
+            <?php else : ?>
+                <a class="site-title" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+            <?php endif; ?>
             <p class="site-description"><?php bloginfo('description'); ?></p>
         </div>
 
         <?php if (has_nav_menu('primary')) : ?>
             <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
                 <span class="sr-only"><?php esc_html_e('Toggle navigation', 'global-bulletin'); ?></span>
-                <span class="nav-toggle-line"></span>
-                <span class="nav-toggle-line"></span>
-                <span class="nav-toggle-line"></span>
+                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M4 8h16M4 12h10M4 16h16" stroke-linecap="round"></path>
+                </svg>
             </button>
 
             <nav class="nav-primary" aria-label="Primary Menu">
