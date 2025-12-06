@@ -4,6 +4,101 @@ if (!defined('ABSPATH')) {
 }
 
 function fin_economy_customize_register($wp_customize) {
+    $wp_customize->add_section('fin_economy_layouts_section', [
+        'title'    => __('Layout & Variants', 'fin-economy'),
+        'priority' => 10,
+    ]);
+
+    $wp_customize->add_setting('fin_economy_home_layout', [
+        'default'           => 'a',
+        'sanitize_callback' => function ($value) {
+            $allowed = ['a', 'b', 'c'];
+            return in_array($value, $allowed, true) ? $value : 'a';
+        },
+    ]);
+    $wp_customize->add_control('fin_economy_home_layout', [
+        'label'       => __('Homepage layout', 'fin-economy'),
+        'description' => __('Switch between hero-led, classic feed, or thematic block layouts.', 'fin-economy'),
+        'section'     => 'fin_economy_layouts_section',
+        'type'        => 'select',
+        'choices'     => [
+            'a' => __('Layout A — Hero + accents', 'fin-economy'),
+            'b' => __('Layout B — Classic feed', 'fin-economy'),
+            'c' => __('Layout C — Thematic blocks', 'fin-economy'),
+        ],
+    ]);
+
+    $wp_customize->add_setting('fin_economy_header_variant', [
+        'default'           => 'compact',
+        'sanitize_callback' => function ($value) {
+            return in_array($value, ['compact', 'centered'], true) ? $value : 'compact';
+        },
+    ]);
+    $wp_customize->add_control('fin_economy_header_variant', [
+        'label'   => __('Header variant', 'fin-economy'),
+        'section' => 'fin_economy_layouts_section',
+        'type'    => 'select',
+        'choices' => [
+            'compact'  => __('Compact (logo left, menu inline)', 'fin-economy'),
+            'centered' => __('Centered (logo center with lower menu)', 'fin-economy'),
+        ],
+    ]);
+
+    $wp_customize->add_setting('fin_economy_footer_variant', [
+        'default'           => 'extended',
+        'sanitize_callback' => function ($value) {
+            return in_array($value, ['extended', 'simple'], true) ? $value : 'extended';
+        },
+    ]);
+    $wp_customize->add_control('fin_economy_footer_variant', [
+        'label'   => __('Footer variant', 'fin-economy'),
+        'section' => 'fin_economy_layouts_section',
+        'type'    => 'select',
+        'choices' => [
+            'extended' => __('Extended (multi-column)', 'fin-economy'),
+            'simple'   => __('Simple (single row)', 'fin-economy'),
+        ],
+    ]);
+
+    $wp_customize->add_section('fin_economy_style_section', [
+        'title'    => __('Color schemes & typography', 'fin-economy'),
+        'priority' => 15,
+    ]);
+
+    $wp_customize->add_setting('fin_economy_color_scheme', [
+        'default'           => 'classic',
+        'sanitize_callback' => function ($value) {
+            return in_array($value, ['classic', 'green', 'dark'], true) ? $value : 'classic';
+        },
+    ]);
+    $wp_customize->add_control('fin_economy_color_scheme', [
+        'label'   => __('Color scheme', 'fin-economy'),
+        'section' => 'fin_economy_style_section',
+        'type'    => 'select',
+        'choices' => [
+            'classic' => __('Classic blue', 'fin-economy'),
+            'green'   => __('Green economy', 'fin-economy'),
+            'dark'    => __('Dark accent', 'fin-economy'),
+        ],
+    ]);
+
+    $wp_customize->add_setting('fin_economy_typography', [
+        'default'           => 'modern',
+        'sanitize_callback' => function ($value) {
+            return in_array($value, ['modern', 'news', 'soft'], true) ? $value : 'modern';
+        },
+    ]);
+    $wp_customize->add_control('fin_economy_typography', [
+        'label'   => __('Typography', 'fin-economy'),
+        'section' => 'fin_economy_style_section',
+        'type'    => 'select',
+        'choices' => [
+            'modern' => __('Modern Sans', 'fin-economy'),
+            'news'   => __('News Serif', 'fin-economy'),
+            'soft'   => __('Soft Sans', 'fin-economy'),
+        ],
+    ]);
+
     $wp_customize->add_section('fin_economy_hero_section', [
         'title'    => __('Hero Block', 'fin-economy'),
         'priority' => 25,
@@ -47,7 +142,7 @@ function fin_economy_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('fin_economy_hero_bg_start', [
-        'default'           => '#0f172a',
+        'default'           => '',
         'sanitize_callback' => 'sanitize_hex_color',
     ]);
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'fin_economy_hero_bg_start', [
@@ -57,7 +152,7 @@ function fin_economy_customize_register($wp_customize) {
     ]));
 
     $wp_customize->add_setting('fin_economy_hero_bg_end', [
-        'default'           => '#1e3a8a',
+        'default'           => '',
         'sanitize_callback' => 'sanitize_hex_color',
     ]);
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'fin_economy_hero_bg_end', [
@@ -67,7 +162,7 @@ function fin_economy_customize_register($wp_customize) {
     ]));
 
     $wp_customize->add_setting('fin_economy_hero_text_color', [
-        'default'           => '#e2e8f0',
+        'default'           => '',
         'sanitize_callback' => 'sanitize_hex_color',
     ]);
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'fin_economy_hero_text_color', [
@@ -82,7 +177,7 @@ function fin_economy_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('fin_economy_header_bg_color', [
-        'default'           => '#ffffff',
+        'default'           => '',
         'sanitize_callback' => 'sanitize_hex_color',
     ]);
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'fin_economy_header_bg_color', [
@@ -91,7 +186,7 @@ function fin_economy_customize_register($wp_customize) {
     ]));
 
     $wp_customize->add_setting('fin_economy_header_text_color', [
-        'default'           => '#0f172a',
+        'default'           => '',
         'sanitize_callback' => 'sanitize_hex_color',
     ]);
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'fin_economy_header_text_color', [
@@ -100,7 +195,7 @@ function fin_economy_customize_register($wp_customize) {
     ]));
 
     $wp_customize->add_setting('fin_economy_accent_color', [
-        'default'           => '#2563eb',
+        'default'           => '',
         'sanitize_callback' => 'sanitize_hex_color',
     ]);
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'fin_economy_accent_color', [
@@ -109,7 +204,7 @@ function fin_economy_customize_register($wp_customize) {
     ]));
 
     $wp_customize->add_setting('fin_economy_button_bg_color', [
-        'default'           => '#2563eb',
+        'default'           => '',
         'sanitize_callback' => 'sanitize_hex_color',
     ]);
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'fin_economy_button_bg_color', [
@@ -119,7 +214,7 @@ function fin_economy_customize_register($wp_customize) {
     ]));
 
     $wp_customize->add_setting('fin_economy_button_hover_color', [
-        'default'           => '#1d4ed8',
+        'default'           => '',
         'sanitize_callback' => 'sanitize_hex_color',
     ]);
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'fin_economy_button_hover_color', [
@@ -129,7 +224,7 @@ function fin_economy_customize_register($wp_customize) {
     ]));
 
     $wp_customize->add_setting('fin_economy_button_text_color', [
-        'default'           => '#ffffff',
+        'default'           => '',
         'sanitize_callback' => 'sanitize_hex_color',
     ]);
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'fin_economy_button_text_color', [
@@ -137,6 +232,132 @@ function fin_economy_customize_register($wp_customize) {
         'description' => __('Adjust label contrast for buttons sitewide.', 'fin-economy'),
         'section'     => 'colors',
     ]));
+
+    $wp_customize->add_section('fin_economy_blocks_section', [
+        'title'    => __('Homepage blocks', 'fin-economy'),
+        'priority' => 32,
+    ]);
+
+    $wp_customize->add_setting('fin_economy_show_hero', [
+        'default'           => true,
+        'sanitize_callback' => 'rest_sanitize_boolean',
+    ]);
+    $wp_customize->add_control('fin_economy_show_hero', [
+        'label'       => __('Show hero / highlights', 'fin-economy'),
+        'description' => __('Enable or disable the hero/highlights block (Layout A & C).', 'fin-economy'),
+        'section'     => 'fin_economy_blocks_section',
+        'type'        => 'checkbox',
+    ]);
+
+    $wp_customize->add_setting('fin_economy_show_latest', [
+        'default'           => true,
+        'sanitize_callback' => 'rest_sanitize_boolean',
+    ]);
+    $wp_customize->add_control('fin_economy_show_latest', [
+        'label'   => __('Show latest articles block', 'fin-economy'),
+        'section' => 'fin_economy_blocks_section',
+        'type'    => 'checkbox',
+    ]);
+
+    $wp_customize->add_setting('fin_economy_show_categories', [
+        'default'           => true,
+        'sanitize_callback' => 'rest_sanitize_boolean',
+    ]);
+    $wp_customize->add_control('fin_economy_show_categories', [
+        'label'   => __('Show category sections', 'fin-economy'),
+        'section' => 'fin_economy_blocks_section',
+        'type'    => 'checkbox',
+    ]);
+
+    $wp_customize->add_setting('fin_economy_show_popular', [
+        'default'           => true,
+        'sanitize_callback' => 'rest_sanitize_boolean',
+    ]);
+    $wp_customize->add_control('fin_economy_show_popular', [
+        'label'   => __('Show popular block', 'fin-economy'),
+        'section' => 'fin_economy_blocks_section',
+        'type'    => 'checkbox',
+    ]);
+
+    $wp_customize->add_setting('fin_economy_block_order_hero', [
+        'default'           => 10,
+        'sanitize_callback' => 'absint',
+    ]);
+    $wp_customize->add_control('fin_economy_block_order_hero', [
+        'label'       => __('Hero priority', 'fin-economy'),
+        'description' => __('Lower numbers render earlier.', 'fin-economy'),
+        'section'     => 'fin_economy_blocks_section',
+        'type'        => 'number',
+    ]);
+
+    $wp_customize->add_setting('fin_economy_block_order_latest', [
+        'default'           => 20,
+        'sanitize_callback' => 'absint',
+    ]);
+    $wp_customize->add_control('fin_economy_block_order_latest', [
+        'label'       => __('Latest block priority', 'fin-economy'),
+        'description' => __('Lower numbers render earlier.', 'fin-economy'),
+        'section'     => 'fin_economy_blocks_section',
+        'type'        => 'number',
+    ]);
+
+    $wp_customize->add_setting('fin_economy_block_order_categories', [
+        'default'           => 30,
+        'sanitize_callback' => 'absint',
+    ]);
+    $wp_customize->add_control('fin_economy_block_order_categories', [
+        'label'       => __('Category block priority', 'fin-economy'),
+        'description' => __('Lower numbers render earlier.', 'fin-economy'),
+        'section'     => 'fin_economy_blocks_section',
+        'type'        => 'number',
+    ]);
+
+    $wp_customize->add_setting('fin_economy_block_order_popular', [
+        'default'           => 40,
+        'sanitize_callback' => 'absint',
+    ]);
+    $wp_customize->add_control('fin_economy_block_order_popular', [
+        'label'       => __('Popular block priority', 'fin-economy'),
+        'description' => __('Lower numbers render earlier.', 'fin-economy'),
+        'section'     => 'fin_economy_blocks_section',
+        'type'        => 'number',
+    ]);
+
+    $wp_customize->add_section('fin_economy_sidebar_section', [
+        'title'    => __('Sidebar', 'fin-economy'),
+        'priority' => 35,
+    ]);
+
+    $wp_customize->add_setting('fin_economy_show_sidebar', [
+        'default'           => true,
+        'sanitize_callback' => 'rest_sanitize_boolean',
+    ]);
+    $wp_customize->add_control('fin_economy_show_sidebar', [
+        'label'       => __('Show sidebar on homepage', 'fin-economy'),
+        'description' => __('Disable to use a full-width layout on thematic pages.', 'fin-economy'),
+        'section'     => 'fin_economy_sidebar_section',
+        'type'        => 'checkbox',
+    ]);
+
+    $wp_customize->add_setting('fin_economy_sidebar_show_categories', [
+        'default'           => true,
+        'sanitize_callback' => 'rest_sanitize_boolean',
+    ]);
+    $wp_customize->add_control('fin_economy_sidebar_show_categories', [
+        'label'   => __('Show default categories block', 'fin-economy'),
+        'section' => 'fin_economy_sidebar_section',
+        'type'    => 'checkbox',
+    ]);
+
+    $wp_customize->add_setting('fin_economy_sidebar_show_popular', [
+        'default'           => true,
+        'sanitize_callback' => 'rest_sanitize_boolean',
+    ]);
+    $wp_customize->add_control('fin_economy_sidebar_show_popular', [
+        'label'   => __('Show default popular block', 'fin-economy'),
+        'section' => 'fin_economy_sidebar_section',
+        'type'    => 'checkbox',
+    ]);
 
     $wp_customize->add_section('fin_economy_footer_section', [
         'title'    => __('Footer', 'fin-economy'),
@@ -154,7 +375,7 @@ function fin_economy_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('fin_economy_footer_bg_color', [
-        'default'           => '#0b1220',
+        'default'           => '',
         'sanitize_callback' => 'sanitize_hex_color',
     ]);
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'fin_economy_footer_bg_color', [
@@ -163,7 +384,7 @@ function fin_economy_customize_register($wp_customize) {
     ]));
 
     $wp_customize->add_setting('fin_economy_footer_text_color', [
-        'default'           => '#e2e8f0',
+        'default'           => '',
         'sanitize_callback' => 'sanitize_hex_color',
     ]);
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'fin_economy_footer_text_color', [
