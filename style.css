@@ -212,6 +212,14 @@ img { max-width: 100%; height: auto; display: block; }
 .single-content { color: #0f172a; }
 .single-content p { margin-bottom: 1em; }
 
+.share-bar { margin-top: 16px; padding-top: 12px; border-top: 1px solid #e2e8f0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.share-label { font-weight: 700; color: #0f172a; }
+.share-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.share-button { width: 44px; height: 44px; border-radius: 12px; background: #f8fafc; border: 1px solid #e2e8f0; color: #0f172a; display: inline-flex; align-items: center; justify-content: center; transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+.share-button:hover,
+.share-button:focus-visible { transform: translateY(-1px); border-color: var(--button-bg, #2563eb); box-shadow: 0 10px 20px rgba(37, 99, 235, 0.18); }
+.share-button svg { width: 18px; height: 18px; }
+
 .related-posts { margin-top: 28px; }
 .related-posts h2 { margin: 0 0 12px; }
 

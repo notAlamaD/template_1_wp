@@ -11,6 +11,7 @@ $fin_economy_includes = [
     'inc/assets.php',
     'inc/customizer.php',
     'inc/demo-content.php',
+    'inc/meta.php',
 ];
 
 foreach ($fin_economy_includes as $file) {
