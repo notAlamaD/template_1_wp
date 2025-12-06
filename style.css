@@ -57,17 +57,18 @@ img { max-width: 100%; height: auto; display: block; }
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 14px;
   position: relative;
 }
 
 .header-top {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   width: 100%;
-  flex-wrap: wrap;
 }
 
 .header-variant-centered .header-inner {
@@ -104,7 +105,7 @@ img { max-width: 100%; height: auto; display: block; }
 .header-search .search-button { border: none; background: var(--button-bg, #2563eb); color: var(--button-text, #ffffff); padding: 8px 12px; border-radius: 10px; font-weight: 700; cursor: pointer; }
 .header-search .search-button:hover,
 .header-search .search-button:focus-visible { background: var(--button-hover, #1d4ed8); }
-.nav-primary { position: relative; width: 100%; margin-left: 0; padding-top: 6px; }
+.nav-primary { position: relative; width: 100%; margin-left: 0; padding-top: 10px; }
 .nav-primary .menu { display: flex; align-items: center; gap: 14px; margin: 0; padding: 0; list-style: none; }
 .nav-primary .menu > li { position: relative; }
 .nav-primary .menu > li > a {
@@ -207,7 +208,7 @@ img { max-width: 100%; height: auto; display: block; }
 .section-block { margin-bottom: 24px; display: grid; gap: 14px; }
 .section-block:last-child { margin-bottom: 0; }
 
-.content-grid { display: grid; grid-template-columns: minmax(0, 2fr) 320px; gap: 24px; margin-top: 32px; }
+.content-grid { display: grid; grid-template-columns: minmax(0, 2fr) 320px; gap: 24px; margin-top: 32px; align-items: start; }
 .content-area { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 20px; box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06); }
 .section-heading h1, .section-heading h2 { margin: 0 0 12px; font-size: 1.4rem; }
 
@@ -236,7 +237,7 @@ img { max-width: 100%; height: auto; display: block; }
 .post-title a { color: #0f172a; }
 .post-excerpt { margin: 0; color: #475569; }
 
-.sidebar { display: grid; gap: 16px; }
+.sidebar { display: grid; gap: 16px; align-self: start; }
 .widget { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 16px; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04); }
 .widget-title { margin: 0 0 12px; font-size: 1.05rem; }
 .widget ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
