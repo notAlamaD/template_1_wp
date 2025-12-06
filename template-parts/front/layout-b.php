@@ -22,6 +22,8 @@ function fin_economy_render_feed_block() {
                     <li class="feed-item">
                         <?php if (has_post_thumbnail()) : ?>
                             <a class="feed-thumb" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+                        <?php else : ?>
+                            <span class="feed-thumb thumb-placeholder" aria-hidden="true"></span>
                         <?php endif; ?>
                         <div class="feed-body">
                             <div class="post-meta-row">

@@ -68,6 +68,8 @@ function fin_economy_render_hero_block() {
                     <article class="accent-card">
                         <?php if (has_post_thumbnail()) : ?>
                             <a class="accent-thumb" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+                        <?php else : ?>
+                            <span class="accent-thumb thumb-placeholder" aria-hidden="true"></span>
                         <?php endif; ?>
                         <div class="accent-body">
                             <h3 class="accent-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
