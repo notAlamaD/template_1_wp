@@ -20,7 +20,7 @@
                             <?php if (!empty($category)) : ?>
                                 <span class="badge"><?php echo esc_html($category[0]->name); ?></span>
                             <?php endif; ?>
-                            <span class="meta-text"><?php echo esc_html(get_the_date()); ?></span>
+                            <span class="meta-text"><?php echo esc_html(fin_economy_get_localized_date()); ?></span>
                         </div>
                         <h1 class="single-title"><?php the_title(); ?></h1>
                     </header>
@@ -96,7 +96,7 @@
                                             <?php if (!empty($category_inner)) : ?>
                                                 <span class="badge"><?php echo esc_html($category_inner[0]->name); ?></span>
                                             <?php endif; ?>
-                                            <span class="meta-text"><?php echo esc_html(get_the_date()); ?></span>
+                                            <span class="meta-text"><?php echo esc_html(fin_economy_get_localized_date()); ?></span>
                                         </div>
                                         <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                     </div>

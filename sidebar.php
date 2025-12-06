@@ -20,7 +20,7 @@
                         ?>
                         <li>
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                            <span class="meta"><?php echo esc_html(get_the_date()); ?></span>
+                            <span class="meta"><?php echo esc_html(fin_economy_get_localized_date()); ?></span>
                         </li>
                         <?php
                     endwhile;

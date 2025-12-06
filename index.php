@@ -23,7 +23,7 @@
                                     <?php if (!empty($category)) : ?>
                                         <span class="badge"><?php echo esc_html($category[0]->name); ?></span>
                                     <?php endif; ?>
-                                    <span class="meta-text"><?php echo esc_html(get_the_date()); ?></span>
+                                    <span class="meta-text"><?php echo esc_html(fin_economy_get_localized_date()); ?></span>
                                 </div>
                                 <h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                                 <p class="post-excerpt"><?php echo esc_html(wp_trim_words(get_the_excerpt(), 26)); ?></p>

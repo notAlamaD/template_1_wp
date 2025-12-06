@@ -27,7 +27,7 @@
                     <?php if (!empty($category)) : ?>
                         <span class="badge"><?php echo esc_html($category[0]->name); ?></span>
                     <?php endif; ?>
-                    <span class="meta-text"><?php echo esc_html(get_the_date()); ?></span>
+                    <span class="meta-text"><?php echo esc_html(fin_economy_get_localized_date()); ?></span>
                 </div>
                 <?php if (has_post_thumbnail()) : ?>
                     <a class="hero-thumb" href="<?php the_permalink(); ?>">
@@ -60,7 +60,7 @@
                     <?php while ($accent_query->have_posts()) : $accent_query->the_post(); ?>
                         <article class="accent-card">
                             <h3 class="accent-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                            <div class="meta-text"><?php echo esc_html(get_the_date()); ?></div>
+                            <div class="meta-text"><?php echo esc_html(fin_economy_get_localized_date()); ?></div>
                             <?php if (has_post_thumbnail()) : ?>
                                 <a class="accent-thumb" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
                             <?php endif; ?>
@@ -102,7 +102,7 @@
                                     <?php if (!empty($category)) : ?>
                                         <span class="badge"><?php echo esc_html($category[0]->name); ?></span>
                                     <?php endif; ?>
-                                    <span class="meta-text"><?php echo esc_html(get_the_date()); ?></span>
+                                    <span class="meta-text"><?php echo esc_html(fin_economy_get_localized_date()); ?></span>
                                 </div>
                                 <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                 <p class="post-excerpt"><?php echo esc_html(wp_trim_words(get_the_excerpt(), 22)); ?></p>

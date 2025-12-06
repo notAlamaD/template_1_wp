@@ -23,6 +23,18 @@ function fin_economy_hex_to_rgba($color, $alpha = 1) {
     return sprintf('rgba(%1$d,%2$d,%3$d,%4$.2f)', $rgb[0], $rgb[1], $rgb[2], max(0, min(1, floatval($alpha))));
 }
 
+function fin_economy_get_localized_date($post_id = null, $format = '') {
+    $post_id   = $post_id ?: get_the_ID();
+    $format    = $format ?: get_option('date_format');
+    $timestamp = get_post_time('U', false, $post_id);
+
+    if (!$timestamp) {
+        return '';
+    }
+
+    return wp_date($format, $timestamp);
+}
+
 function fin_economy_get_popular_posts($count = 4) {
     $query = new WP_Query([
         'posts_per_page'      => $count,
