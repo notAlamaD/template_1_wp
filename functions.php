@@ -390,6 +390,27 @@ function fin_economy_handle_demo_import() {
 }
 add_action('admin_post_fin_economy_import_demo', 'fin_economy_handle_demo_import');
 
+function fin_economy_import_demo_image($post_id, $seed = 1) {
+    if (has_post_thumbnail($post_id)) {
+        return;
+    }
+
+    $seed     = max(1, absint($seed));
+    $image_url = esc_url_raw(sprintf('https://picsum.photos/seed/fin-economy-%1$d/1200/675', $seed));
+
+    if (!function_exists('media_sideload_image')) {
+        require_once ABSPATH . 'wp-admin/includes/media.php';
+        require_once ABSPATH . 'wp-admin/includes/file.php';
+        require_once ABSPATH . 'wp-admin/includes/image.php';
+    }
+
+    $attachment_id = media_sideload_image($image_url, $post_id, null, 'id');
+
+    if (!is_wp_error($attachment_id)) {
+        set_post_thumbnail($post_id, (int) $attachment_id);
+    }
+}
+
 function fin_economy_create_demo_content() {
     $categories = [
         'kommunalka' => __('Комуналка', 'fin-economy'),
@@ -434,51 +455,61 @@ function fin_economy_create_demo_content() {
     $posts = [
         [
             'title'   => __('Як знизити рахунки за комунальні послуги цієї зими', 'fin-economy'),
-            'content' => __('Практичні поради щодо економії електрики, тепла та води для міських квартир.', 'fin-economy'),
+            'content' => __('Підготували огляд простих кроків, які реально допомагають платити менше: від налаштування бойлера до вибору енергоощадних ламп.', 'fin-economy') . "\n\n" . __('Розповідаємо, як слідкувати за нічними тарифами, що поставити на таймер, а також як перевірити, чи не витрачає ваша техніка більше, ніж заявлено.', 'fin-economy') . "\n\n" . __('Окремо пояснюємо, які компенсації діють для родин та як подати заявку онлайн без черг.', 'fin-economy'),
             'cat'     => 'kommunalka',
+            'image'   => 1,
         ],
         [
             'title'   => __('Нове коригування тарифів: що зміниться з наступного місяця', 'fin-economy'),
-            'content' => __('Короткий огляд рішення регулятора та вплив на домогосподарства.', 'fin-economy'),
+            'content' => __('Коротко про рішення регулятора: які послуги подорожчають, де тарифи лишаться без змін і як це вплине на середню квитанцію.', 'fin-economy') . "\n\n" . __('Ми зібрали коментарі експертів та підготували таблицю з ключовими цифрами, щоб ви могли спланувати бюджет заздалегідь.', 'fin-economy') . "\n\n" . __('Також нагадуємо про програми субсидій та пільг, що діють у вашому регіоні.', 'fin-economy'),
             'cat'     => 'tariff',
+            'image'   => 2,
         ],
         [
             'title'   => __('5 звичок, які допоможуть заощадити щодня', 'fin-economy'),
-            'content' => __('Невеликі зміни у побуті, що зменшують витрати без втрати комфорту.', 'fin-economy'),
+            'content' => __('Зміни у побуті не обовʼязково складні: сортуємо покупки за пріоритетами, плануємо харчування на тиждень та користуємося кешбеком обережно.', 'fin-economy') . "\n\n" . __('Ділимося прикладами, як відмовитися від імпульсивних витрат і при цьому не втратити в комфорті.', 'fin-economy') . "\n\n" . __('Додаємо чекліст для завантаження, щоб впровадити ці звички поступово.', 'fin-economy'),
             'cat'     => 'economy',
+            'image'   => 3,
         ],
         [
             'title'   => __('Огляд банківських депозитів: ставки та бонуси', 'fin-economy'),
-            'content' => __('Порівнюємо пропозиції лідерів ринку та звертаємо увагу на умови договорів.', 'fin-economy'),
+            'content' => __('Порівняли пропозиції найбільших банків: де є бонус за перше розміщення, а де — підвищена ставка на короткий термін.', 'fin-economy') . "\n\n" . __('Звертаємо увагу на умови дострокового розірвання, ліміти гарантування та додаткові комісії.', 'fin-economy') . "\n\n" . __('Розповідаємо, як перевірити надійність банку і що робити зі старими депозитними договорами.', 'fin-economy'),
             'cat'     => 'finance',
+            'image'   => 4,
         ],
         [
             'title'   => __('Куди інвестують українці у 2025 році', 'fin-economy'),
-            'content' => __('Аналіз популярних інструментів: ОВДП, ETF та нерухомість.', 'fin-economy'),
+            'content' => __('Порівнюємо популярні інструменти: державні облігації, ETF та ринок оренди нерухомості.', 'fin-economy') . "\n\n" . __('Розглядаємо приклади портфелів для різних рівнів ризику й пояснюємо, як диверсифікація зменшує втрати.', 'fin-economy') . "\n\n" . __('Є окремий блок про податки та що зміниться після 1 липня.', 'fin-economy'),
             'cat'     => 'invest',
+            'image'   => 5,
         ],
         [
             'title'   => __('Як працює індекс споживчих цін і чому він важливий', 'fin-economy'),
-            'content' => __('Розбираємо CPI простими словами та оцінюємо його вплив на бюджет.', 'fin-economy'),
+            'content' => __('Пояснюємо, як статистики рахують CPI, які кошики беруть за основу та як часто оновлюють методологію.', 'fin-economy') . "\n\n" . __('Наводимо приклади впливу інфляції на кредити, заощадження та зарплати.', 'fin-economy') . "\n\n" . __('Додаємо графік динаміки за останні роки та підказуємо, де стежити за офіційними даними.', 'fin-economy'),
             'cat'     => 'finance',
+            'image'   => 6,
         ],
     ];
 
-    foreach ($posts as $post) {
+    foreach ($posts as $index => $post) {
         if (get_page_by_title($post['title'], OBJECT, 'post')) {
             continue;
         }
 
         $cat_id = isset($category_ids[$post['cat']]) ? (int) $category_ids[$post['cat']] : 0;
 
-        wp_insert_post([
-            'post_title'   => $post['title'],
-            'post_content' => $post['content'],
-            'post_excerpt' => $post['content'],
-            'post_status'  => 'publish',
-            'post_type'    => 'post',
+        $post_id = wp_insert_post([
+            'post_title'    => $post['title'],
+            'post_content'  => $post['content'],
+            'post_excerpt'  => $post['content'],
+            'post_status'   => 'publish',
+            'post_type'     => 'post',
             'post_category' => $cat_id ? [$cat_id] : [],
         ]);
+
+        if (!is_wp_error($post_id)) {
+            fin_economy_import_demo_image($post_id, isset($post['image']) ? (int) $post['image'] : $index);
+        }
     }
 
     $primary_menu = wp_get_nav_menu_object(__('Головне меню', 'fin-economy'));
