@@ -3,6 +3,8 @@ if (!defined('FIN_ECONOMY_VERSION')) {
     define('FIN_ECONOMY_VERSION', '1.0.0');
 }
 
+require_once get_template_directory() . '/schema.php';
+
 function fin_economy_setup() {
     load_theme_textdomain('fin-economy', get_template_directory() . '/languages');
     add_theme_support('title-tag');
