@@ -3,7 +3,10 @@
     <div class="content-grid">
         <div class="content-area">
             <header class="section-heading">
-                <h1><?php esc_html_e('Останні публікації', 'fin-economy'); ?></h1>
+                <h1><?php the_archive_title(); ?></h1>
+                <?php if (get_the_archive_description()) : ?>
+                    <p class="archive-description"><?php echo wp_kses_post(get_the_archive_description()); ?></p>
+                <?php endif; ?>
             </header>
 
             <?php if (have_posts()) : ?>
@@ -26,14 +29,13 @@
                                     <span class="meta-text"><?php echo esc_html(get_the_date()); ?></span>
                                 </div>
                                 <h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                                <p class="post-excerpt"><?php echo esc_html(wp_trim_words(get_the_excerpt(), 26)); ?></p>
                             </div>
                         </article>
                     <?php endwhile; ?>
                 </div>
                 <?php the_posts_pagination(); ?>
             <?php else : ?>
-                <p><?php esc_html_e('Публікацій поки немає.', 'fin-economy'); ?></p>
+                <p><?php esc_html_e('Матеріалів поки немає.', 'fin-economy'); ?></p>
             <?php endif; ?>
         </div>
 

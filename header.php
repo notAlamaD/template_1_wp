@@ -6,6 +6,8 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
+<a class="skip-link sr-only" href="#main-content"><?php esc_html_e('Skip to content', 'fin-economy'); ?></a>
 <header class="site-header">
     <div class="header-inner">
         <div class="brand">
@@ -13,73 +15,35 @@
                 <div class="site-title logo-only"><?php the_custom_logo(); ?></div>
             <?php else : ?>
                 <a class="site-title" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+                <p class="site-description"><?php bloginfo('description'); ?></p>
             <?php endif; ?>
-            <p class="site-description"><?php bloginfo('description'); ?></p>
         </div>
+
+        <form role="search" method="get" class="header-search" action="<?php echo esc_url(home_url('/')); ?>">
+            <label class="sr-only" for="header-search-field"><?php esc_html_e('Пошук', 'fin-economy'); ?></label>
+            <input id="header-search-field" type="search" name="s" placeholder="<?php esc_attr_e('Пошук...', 'fin-economy'); ?>" />
+            <button type="submit" class="search-button"><?php esc_html_e('Пошук', 'fin-economy'); ?></button>
+        </form>
 
         <?php if (has_nav_menu('primary')) : ?>
             <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
-                <span class="sr-only"><?php esc_html_e('Toggle navigation', 'global-bulletin'); ?></span>
+                <span class="sr-only"><?php esc_html_e('Toggle navigation', 'fin-economy'); ?></span>
                 <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M4 8h16M4 12h10M4 16h16" stroke-linecap="round"></path>
+                    <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"></path>
                 </svg>
             </button>
 
-            <nav class="nav-primary" aria-label="Primary Menu">
-                <?php wp_nav_menu([
+            <nav class="nav-primary" aria-label="<?php esc_attr_e('Primary menu', 'fin-economy'); ?>">
+                <?php
+                wp_nav_menu([
                     'theme_location' => 'primary',
                     'container'      => false,
                     'menu_id'        => 'primary-menu',
                     'menu_class'     => 'menu',
                     'depth'          => 2,
-                ]); ?>
+                ]);
+                ?>
             </nav>
         <?php endif; ?>
     </div>
 </header>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav-primary');
-    const submenuLinks = nav ? nav.querySelectorAll('.menu-item-has-children > a') : [];
-    const mobileBreakpoint = 960;
-    if (!toggle || !nav) return;
-
-    toggle.addEventListener('click', function () {
-      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!isOpen));
-      nav.classList.toggle('nav-open', !isOpen);
-
-      if (isOpen) {
-        submenuLinks.forEach((link) => {
-          link.parentElement.classList.remove('nav-sub-open');
-          link.setAttribute('aria-expanded', 'false');
-        });
-      }
-    });
-
-    submenuLinks.forEach((link) => {
-      link.setAttribute('aria-expanded', 'false');
-      link.addEventListener('click', function (event) {
-        if (window.innerWidth <= mobileBreakpoint) {
-          event.preventDefault();
-          const parent = link.parentElement;
-          const isOpen = parent.classList.toggle('nav-sub-open');
-          link.setAttribute('aria-expanded', String(isOpen));
-        }
-      });
-    });
-
-    window.addEventListener('resize', function () {
-      if (window.innerWidth > mobileBreakpoint) {
-        toggle.setAttribute('aria-expanded', 'false');
-        nav.classList.remove('nav-open');
-        submenuLinks.forEach((link) => {
-          link.parentElement.classList.remove('nav-sub-open');
-          link.setAttribute('aria-expanded', 'false');
-        });
-      }
-    });
-  });
-</script>

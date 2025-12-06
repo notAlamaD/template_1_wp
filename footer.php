@@ -11,12 +11,12 @@
                     </div>
                 <?php endif; ?>
             </div>
-            <?php $footer_text = get_theme_mod('global_bulletin_footer_text', __('Stay informed with our latest coverage.', 'global-bulletin')); ?>
+            <?php $footer_text = get_theme_mod('fin_economy_footer_text', __('© 2025 «Фінанси та економія».', 'fin-economy')); ?>
             <div class="footer-text"><?php echo wp_kses_post(wpautop($footer_text)); ?></div>
         </div>
 
         <?php if (has_nav_menu('footer')) : ?>
-            <nav class="footer-nav" aria-label="Footer">
+            <nav class="footer-nav" aria-label="<?php esc_attr_e('Footer menu', 'fin-economy'); ?>">
                 <?php
                 wp_nav_menu([
                     'theme_location' => 'footer',
@@ -41,20 +41,20 @@
 
             $social_links = [];
             foreach (['facebook', 'twitter', 'instagram', 'linkedin', 'youtube'] as $network) {
-                $url = trim(get_theme_mod('global_bulletin_social_' . $network, ''));
+                $url = trim(get_theme_mod('fin_economy_social_' . $network, ''));
                 if (!empty($url)) {
                     $social_links[$network] = $url;
                 }
             }
 
-            $rss_custom = trim(get_theme_mod('global_bulletin_social_rss', ''));
+            $rss_custom = trim(get_theme_mod('fin_economy_social_rss', ''));
             if (!empty($rss_custom)) {
                 $social_links['rss'] = $rss_custom;
             }
 
             if (!empty($social_links)) :
             ?>
-                <div class="footer-social" aria-label="Social links">
+                <div class="footer-social" aria-label="<?php esc_attr_e('Social links', 'fin-economy'); ?>">
                     <?php foreach ($social_links as $network => $url) : ?>
                         <a class="footer-social-link" href="<?php echo esc_url($url); ?>" target="_blank" rel="noopener noreferrer">
                             <span class="screen-reader-text"><?php echo esc_html(ucfirst($network)); ?></span>
