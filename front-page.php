@@ -59,11 +59,13 @@
                 <?php if ($accent_query->have_posts()) : ?>
                     <?php while ($accent_query->have_posts()) : $accent_query->the_post(); ?>
                         <article class="accent-card">
-                            <h3 class="accent-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                            <div class="meta-text"><?php echo esc_html(fin_economy_get_localized_date()); ?></div>
                             <?php if (has_post_thumbnail()) : ?>
                                 <a class="accent-thumb" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
                             <?php endif; ?>
+                            <div class="accent-body">
+                                <h3 class="accent-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                <div class="meta-text accent-date"><?php echo esc_html(fin_economy_get_localized_date()); ?></div>
+                            </div>
                         </article>
                     <?php endwhile; ?>
                     <?php wp_reset_postdata(); ?>
