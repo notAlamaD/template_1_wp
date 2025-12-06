@@ -1,14 +1,25 @@
 <?php get_header(); ?>
 <main id="main-content" class="site-main">
     <?php
-    $hero_query = new WP_Query([
-        'posts_per_page'      => 4,
+    $hero_category   = absint(get_theme_mod('fin_economy_hero_featured_category', 0));
+    $accent_category = absint(get_theme_mod('fin_economy_hero_accent_category', 0));
+    $accent_count    = max(1, min(6, absint(get_theme_mod('fin_economy_hero_accent_count', 3))));
+
+    $hero_args = [
+        'posts_per_page'      => 1,
         'ignore_sticky_posts' => true,
-    ]);
+    ];
+
+    if ($hero_category) {
+        $hero_args['cat'] = $hero_category;
+    }
+
+    $hero_query = new WP_Query($hero_args);
     ?>
 
     <?php if ($hero_query->have_posts()) : ?>
         <?php $hero_query->the_post(); ?>
+        <?php $hero_post_id = get_the_ID(); ?>
         <section class="hero">
             <div class="hero-featured">
                 <div class="hero-meta">
@@ -29,16 +40,34 @@
             </div>
 
             <div class="hero-accents" aria-label="<?php esc_attr_e('Quick highlights', 'fin-economy'); ?>">
-                <?php $count = 0; ?>
-                <?php while ($hero_query->have_posts() && $count < 3) : $hero_query->the_post(); $count++; ?>
-                    <article class="accent-card">
-                        <h3 class="accent-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                        <div class="meta-text"><?php echo esc_html(get_the_date()); ?></div>
-                        <?php if (has_post_thumbnail()) : ?>
-                            <a class="accent-thumb" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-                        <?php endif; ?>
-                    </article>
-                <?php endwhile; ?>
+                <?php
+                $accent_args = [
+                    'posts_per_page'      => $accent_count,
+                    'ignore_sticky_posts' => true,
+                    'post__not_in'        => [$hero_post_id],
+                ];
+
+                if ($accent_category) {
+                    $accent_args['cat'] = $accent_category;
+                } elseif ($hero_category) {
+                    $accent_args['cat'] = $hero_category;
+                }
+
+                $accent_query = new WP_Query($accent_args);
+                ?>
+
+                <?php if ($accent_query->have_posts()) : ?>
+                    <?php while ($accent_query->have_posts()) : $accent_query->the_post(); ?>
+                        <article class="accent-card">
+                            <h3 class="accent-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                            <div class="meta-text"><?php echo esc_html(get_the_date()); ?></div>
+                            <?php if (has_post_thumbnail()) : ?>
+                                <a class="accent-thumb" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+                            <?php endif; ?>
+                        </article>
+                    <?php endwhile; ?>
+                    <?php wp_reset_postdata(); ?>
+                <?php endif; ?>
             </div>
         </section>
         <?php wp_reset_postdata(); ?>

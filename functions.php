@@ -58,6 +58,48 @@ function fin_economy_assets() {
 add_action('wp_enqueue_scripts', 'fin_economy_assets');
 
 function fin_economy_customize_register($wp_customize) {
+    $wp_customize->add_section('fin_economy_hero_section', [
+        'title'    => __('Hero Block', 'fin-economy'),
+        'priority' => 25,
+    ]);
+
+    $wp_customize->add_setting('fin_economy_hero_featured_category', [
+        'default'           => 0,
+        'sanitize_callback' => 'absint',
+    ]);
+    $wp_customize->add_control('fin_economy_hero_featured_category', [
+        'label'       => __('Featured post category', 'fin-economy'),
+        'description' => __('Choose which category feeds the large hero article. Leave empty for the latest post from any category.', 'fin-economy'),
+        'section'     => 'fin_economy_hero_section',
+        'type'        => 'dropdown-categories',
+    ]);
+
+    $wp_customize->add_setting('fin_economy_hero_accent_category', [
+        'default'           => 0,
+        'sanitize_callback' => 'absint',
+    ]);
+    $wp_customize->add_control('fin_economy_hero_accent_category', [
+        'label'       => __('Quick accents category', 'fin-economy'),
+        'description' => __('Select a category for the smaller highlight cards. Falls back to the featured category when empty.', 'fin-economy'),
+        'section'     => 'fin_economy_hero_section',
+        'type'        => 'dropdown-categories',
+    ]);
+
+    $wp_customize->add_setting('fin_economy_hero_accent_count', [
+        'default'           => 3,
+        'sanitize_callback' => 'absint',
+    ]);
+    $wp_customize->add_control('fin_economy_hero_accent_count', [
+        'label'       => __('Number of quick accents', 'fin-economy'),
+        'description' => __('Control how many smaller cards appear beside the hero (1–6).', 'fin-economy'),
+        'section'     => 'fin_economy_hero_section',
+        'type'        => 'number',
+        'input_attrs' => [
+            'min' => 1,
+            'max' => 6,
+        ],
+    ]);
+
     $wp_customize->add_section('fin_economy_header_section', [
         'title'    => __('Header Styling', 'fin-economy'),
         'priority' => 30,
