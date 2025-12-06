@@ -176,6 +176,7 @@ a:hover { text-decoration: underline; }
   border-radius: 999px;
 }
 
+
 .hero {
   display: grid;
   grid-template-columns: 2fr 1fr;
