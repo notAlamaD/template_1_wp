@@ -49,6 +49,7 @@ a:hover { text-decoration: underline; }
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  position: relative;
 }
 
 .brand {
@@ -178,6 +179,7 @@ a:hover { text-decoration: underline; }
   gap: 6px;
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease;
+  margin-left: auto;
 }
 
 .nav-toggle:hover,
@@ -226,22 +228,32 @@ a:hover { text-decoration: underline; }
 
 @media (max-width: 960px) {
   .header-inner {
-    align-items: flex-start;
+    align-items: center;
   }
 
   .nav-toggle {
     display: inline-flex;
+    order: 2;
   }
 
   .nav-primary {
-    width: 100%;
+    position: absolute;
+    width: calc(100% + 48px);
+    left: -24px;
+    top: calc(100% + 8px);
+    padding: 0 24px;
+    pointer-events: none;
+  }
+
+  .nav-primary.nav-open {
+    pointer-events: auto;
   }
 
   .nav-primary .menu {
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
-    margin-top: 12px;
+    margin-top: 0;
     background: #ffffff;
     padding: 12px;
     border: 1px solid rgba(15, 23, 42, 0.08);
