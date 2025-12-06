@@ -130,7 +130,7 @@ a:hover { text-decoration: underline; }
 .nav-primary .sub-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 10px);
+  top: calc(100% + 2px);
   left: 0;
   min-width: 220px;
   background: #ffffff;
