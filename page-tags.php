@@ -35,18 +35,11 @@ $total_pages = $total_tags > 0 ? (int) ceil($total_tags / $per_page) : 1;
                     <?php endif; ?>
                     <div class="tag-archive">
                         <?php if (!empty($tags) && !is_wp_error($tags)) : ?>
-                            <div class="tag-archive-grid">
+                            <div class="tag-archive-chips">
                                 <?php foreach ($tags as $tag) : ?>
-                                    <a class="tag-card" href="<?php echo esc_url(get_term_link($tag)); ?>">
-                                        <div class="tag-card-name"><?php echo esc_html($tag->name); ?></div>
-                                        <div class="tag-card-meta">
-                                            <?php
-                                            echo sprintf(
-                                                _n('%s post', '%s posts', $tag->count, 'fin-economy'),
-                                                number_format_i18n($tag->count)
-                                            );
-                                            ?>
-                                        </div>
+                                    <a class="tag-chip" href="<?php echo esc_url(get_term_link($tag)); ?>">
+                                        <span class="tag-chip-name"><?php echo esc_html($tag->name); ?></span>
+                                        <span class="tag-chip-count"><?php echo esc_html(number_format_i18n($tag->count)); ?></span>
                                     </a>
                                 <?php endforeach; ?>
                             </div>

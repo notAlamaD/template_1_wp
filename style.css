@@ -264,9 +264,10 @@ img { max-width: 100%; height: auto; display: block; }
 .post-tags { margin-top: 16px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .post-tags-label { font-weight: 700; color: #0f172a; }
 .post-tags-list { display: flex; gap: 8px; flex-wrap: wrap; }
-.tag-chip { padding: 6px 12px; border-radius: 999px; background: #f8fafc; color: #0f172a; border: 1px solid #e2e8f0; text-decoration: none; font-weight: 700; transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+.tag-chip { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; background: #f8fafc; color: #0f172a; border: 1px solid #e2e8f0; text-decoration: none; font-weight: 700; transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
 .tag-chip:hover,
 .tag-chip:focus-visible { transform: translateY(-1px); border-color: var(--button-bg, #2563eb); box-shadow: 0 8px 18px rgba(37, 99, 235, 0.16); outline: none; }
+.tag-chip-count { color: #475569; font-size: 0.92rem; font-weight: 600; }
 
 .related-posts { margin-top: 28px; }
 .related-posts h2 { margin: 0 0 12px; }
@@ -335,12 +336,8 @@ img { max-width: 100%; height: auto; display: block; }
 .news-feed-item { grid-template-columns: 150px 1fr; align-items: center; }
 .news-feed-item .feed-thumb { height: 110px; }
 
-.tag-archive { margin-top: 18px; display: grid; gap: 14px; }
-.tag-archive-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
-.tag-card { border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px 14px; background: #ffffff; display: grid; gap: 6px; text-decoration: none; color: #0f172a; box-shadow: 0 6px 12px rgba(15, 23, 42, 0.06); transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
-.tag-card:hover, .tag-card:focus-visible { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(15, 23, 42, 0.1); border-color: var(--button-bg, #2563eb); outline: none; }
-.tag-card-name { font-weight: 700; font-size: 1rem; }
-.tag-card-meta { color: #475569; font-size: 0.95rem; }
+.tag-archive { margin-top: 18px; }
+.tag-archive-chips { display: flex; flex-wrap: wrap; gap: 10px; }
 
 .pagination { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .pagination .page-numbers { display: inline-flex; align-items: center; justify-content: center; padding: 8px 12px; border-radius: 10px; border: 1px solid #e2e8f0; background: #ffffff; color: #0f172a; text-decoration: none; min-width: 36px; text-align: center; transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease; }
