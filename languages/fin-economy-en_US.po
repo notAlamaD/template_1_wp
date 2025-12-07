@@ -363,3 +363,56 @@ msgstr "Previous"
 
 msgid "Next"
 msgstr "Next"
+
+msgid "Коментарі"
+msgstr "Comments"
+
+msgid "Відповідь на %s"
+msgstr "Reply to %s"
+
+msgid "Скасувати відповідь"
+msgstr "Cancel reply"
+
+msgid "Надіслати"
+msgstr "Submit"
+
+msgid "Коментар"
+msgstr "Comment"
+
+msgid "Ім’я"
+msgstr "Name"
+
+msgid "Підтвердіть, що ви людина"
+msgstr "Please verify you are human"
+
+msgid "Скільки буде %1$s + %2$s?"
+msgstr "What is %1$s + %2$s?"
+
+msgid "Будь ласка, розв’яжіть приклад, щоб залишити коментар."
+msgstr "Please solve the equation to post a comment."
+
+msgid "Невдала перевірка безпеки. Спробуйте ще раз."
+msgstr "Security check failed. Please try again."
+
+msgid "Перевірка безпеки не пройдена. Оновіть сторінку та спробуйте знову."
+msgstr "Security verification failed. Refresh the page and try again."
+
+msgid "Неправильна відповідь на приклад. Спробуйте ще раз."
+msgstr "Incorrect answer to the equation. Please try again."
+
+msgid "Відповісти"
+msgstr "Reply"
+
+msgid "%s коментар"
+msgid_plural "%s коментарі(в)"
+msgstr[0] "%s comment"
+msgstr[1] "%s comments"
+
+msgid "Попередні"
+msgstr "Previous"
+
+msgid "Наступні"
+msgstr "Next"
+
+msgid "Додати коментар"
+msgstr "Add a comment"

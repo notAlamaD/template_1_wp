@@ -358,3 +358,56 @@ msgstr ""
 
 msgid "Next"
 msgstr ""
+
+msgid "Коментарі"
+msgstr ""
+
+msgid "Відповідь на %s"
+msgstr ""
+
+msgid "Скасувати відповідь"
+msgstr ""
+
+msgid "Надіслати"
+msgstr ""
+
+msgid "Коментар"
+msgstr ""
+
+msgid "Ім’я"
+msgstr ""
+
+msgid "Підтвердіть, що ви людина"
+msgstr ""
+
+msgid "Скільки буде %1$s + %2$s?"
+msgstr ""
+
+msgid "Будь ласка, розв’яжіть приклад, щоб залишити коментар."
+msgstr ""
+
+msgid "Невдала перевірка безпеки. Спробуйте ще раз."
+msgstr ""
+
+msgid "Перевірка безпеки не пройдена. Оновіть сторінку та спробуйте знову."
+msgstr ""
+
+msgid "Неправильна відповідь на приклад. Спробуйте ще раз."
+msgstr ""
+
+msgid "Відповісти"
+msgstr ""
+
+msgid "%s коментар"
+msgid_plural "%s коментарі(в)"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Попередні"
+msgstr ""
+
+msgid "Наступні"
+msgstr ""
+
+msgid "Додати коментар"
+msgstr ""

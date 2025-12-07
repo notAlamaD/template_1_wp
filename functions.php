@@ -12,6 +12,7 @@ $fin_economy_includes = [
     'inc/customizer.php',
     'inc/demo-content.php',
     'inc/meta.php',
+    'inc/comments.php',
 ];
 
 foreach ($fin_economy_includes as $file) {
