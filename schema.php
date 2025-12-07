@@ -31,6 +31,40 @@ function fin_economy_schema_output($data) {
     echo '<script type="application/ld+json">' . wp_json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . '</script>' . "\n";
 }
 
+function fin_economy_schema_comments($post_id) {
+    if (!post_type_supports(get_post_type($post_id), 'comments') || get_comments_number($post_id) === 0) {
+        return [];
+    }
+
+    $comments = get_comments([
+        'post_id' => $post_id,
+        'status'  => 'approve',
+        'number'  => 20,
+        'orderby' => 'comment_date_gmt',
+        'order'   => 'DESC',
+    ]);
+
+    if (empty($comments)) {
+        return [];
+    }
+
+    $output = [];
+
+    foreach ($comments as $comment) {
+        $content = wp_trim_words(wp_strip_all_tags($comment->comment_content), 80);
+
+        $output[] = [
+            '@type'         => 'Comment',
+            'author'        => $comment->comment_author,
+            'datePublished' => mysql_to_rfc3339($comment->comment_date_gmt),
+            'text'          => $content,
+            'url'           => get_comment_link($comment),
+        ];
+    }
+
+    return $output;
+}
+
 function fin_economy_schema_organization() {
     if (!fin_economy_schema_enabled()) {
         return;
@@ -152,6 +186,9 @@ function fin_economy_schema_article() {
 
     $publisher_logo = fin_economy_schema_logo_url();
 
+    $comments      = fin_economy_schema_comments($post_id);
+    $comment_count = get_comments_number($post_id);
+
     $schema = [
         '@context'        => 'https://schema.org',
         '@type'           => 'NewsArticle',
@@ -186,6 +223,11 @@ function fin_economy_schema_article() {
             '@type' => 'ImageObject',
             'url'   => esc_url_raw($publisher_logo),
         ];
+    }
+
+    if (!empty($comments)) {
+        $schema['comment'] = $comments;
+        $schema['commentCount'] = $comment_count;
     }
 
     fin_economy_schema_output($schema);
