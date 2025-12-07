@@ -420,8 +420,8 @@ img { max-width: 100%; height: auto; display: block; }
 
   .hero { grid-template-columns: 1fr; }
   .content-grid { grid-template-columns: 1fr; }
-  .content-area { order: 2; }
-  .sidebar { order: 1; }
+  .content-area { order: 1; }
+  .sidebar { order: 2; }
 }
 
 @media (max-width: 640px) {
