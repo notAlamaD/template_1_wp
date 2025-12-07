@@ -77,6 +77,9 @@ msgstr "Поділитися"
 msgid "Поділитися у Facebook"
 msgstr "Поділитися у Facebook"
 
+msgid "Теги"
+msgstr "Теги"
+
 msgid "Поділитися у X (Twitter)"
 msgstr "Поділитися у X (Twitter)"
 

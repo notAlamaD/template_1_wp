@@ -72,6 +72,9 @@ msgstr ""
 msgid "Поділитися у Facebook"
 msgstr ""
 
+msgid "Теги"
+msgstr ""
+
 msgid "Поділитися у X (Twitter)"
 msgstr ""
 

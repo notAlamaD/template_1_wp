@@ -35,6 +35,20 @@
                         <?php the_content(); ?>
                     </div>
 
+                    <?php $tags = get_the_tags(); ?>
+                    <?php if ($tags) : ?>
+                        <div class="post-tags" aria-label="<?php esc_attr_e('Теги', 'fin-economy'); ?>">
+                            <span class="post-tags-label"><?php esc_html_e('Теги', 'fin-economy'); ?></span>
+                            <div class="post-tags-list">
+                                <?php foreach ($tags as $tag) : ?>
+                                    <a class="tag-chip" href="<?php echo esc_url(get_tag_link($tag->term_id)); ?>">
+                                        <?php echo esc_html($tag->name); ?>
+                                    </a>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+
                     <?php
                     $share_url   = rawurlencode(get_permalink());
                     $share_title = rawurlencode(get_the_title());
