@@ -60,6 +60,50 @@ function fin_economy_customize_register($wp_customize) {
         ],
     ]);
 
+    $wp_customize->add_section('fin_economy_comments_section', [
+        'title'    => __('Comments & spam protection', 'fin-economy'),
+        'priority' => 22,
+    ]);
+
+    $wp_customize->add_setting('fin_economy_captcha_type', [
+        'default'           => 'math',
+        'sanitize_callback' => function ($value) {
+            return in_array($value, ['math', 'recaptcha'], true) ? $value : 'math';
+        },
+    ]);
+    $wp_customize->add_control('fin_economy_captcha_type', [
+        'label'       => __('Comment captcha type', 'fin-economy'),
+        'description' => __('Use a simple math challenge or Google reCAPTCHA for guest comments.', 'fin-economy'),
+        'section'     => 'fin_economy_comments_section',
+        'type'        => 'select',
+        'choices'     => [
+            'math'      => __('Math question (built-in)', 'fin-economy'),
+            'recaptcha' => __('Google reCAPTCHA v2', 'fin-economy'),
+        ],
+    ]);
+
+    $wp_customize->add_setting('fin_economy_recaptcha_site_key', [
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+    $wp_customize->add_control('fin_economy_recaptcha_site_key', [
+        'label'       => __('reCAPTCHA site key', 'fin-economy'),
+        'description' => __('Required if reCAPTCHA is selected.', 'fin-economy'),
+        'section'     => 'fin_economy_comments_section',
+        'type'        => 'text',
+    ]);
+
+    $wp_customize->add_setting('fin_economy_recaptcha_secret_key', [
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+    $wp_customize->add_control('fin_economy_recaptcha_secret_key', [
+        'label'       => __('reCAPTCHA secret key', 'fin-economy'),
+        'description' => __('Stored server-side for validation.', 'fin-economy'),
+        'section'     => 'fin_economy_comments_section',
+        'type'        => 'text',
+    ]);
+
     $wp_customize->add_section('fin_economy_style_section', [
         'title'    => __('Color schemes & typography', 'fin-economy'),
         'priority' => 15,

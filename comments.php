@@ -34,7 +34,6 @@ if (post_password_required()) {
 
     <?php if (comments_open()) : ?>
         <div class="comment-form-wrapper">
-            <h3 class="comment-reply-title"><?php esc_html_e('Додати коментар', 'fin-economy'); ?></h3>
             <?php comment_form(); ?>
         </div>
     <?php endif; ?>

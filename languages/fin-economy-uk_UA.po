@@ -418,3 +418,36 @@ msgstr "Наступні"
 
 msgid "Додати коментар"
 msgstr "Додати коментар"
+
+msgid "Comments & spam protection"
+msgstr "Коментарі та захист від спаму"
+
+msgid "Comment captcha type"
+msgstr "Тип капчі для коментарів"
+
+msgid "Use a simple math challenge or Google reCAPTCHA for guest comments."
+msgstr "Використовуйте просту математичну перевірку або Google reCAPTCHA для гостьових коментарів."
+
+msgid "Math question (built-in)"
+msgstr "Математична перевірка (вбудована)"
+
+msgid "Google reCAPTCHA v2"
+msgstr "Google reCAPTCHA v2"
+
+msgid "reCAPTCHA site key"
+msgstr "Ключ сайту reCAPTCHA"
+
+msgid "Required if reCAPTCHA is selected."
+msgstr "Потрібно, якщо обрано reCAPTCHA."
+
+msgid "reCAPTCHA secret key"
+msgstr "Секретний ключ reCAPTCHA"
+
+msgid "Stored server-side for validation."
+msgstr "Зберігається на сервері для перевірки."
+
+msgid "Будь ласка, пройдіть перевірку, щоб залишити коментар."
+msgstr "Будь ласка, пройдіть перевірку, щоб залишити коментар."
+
+msgid "Перевірка reCAPTCHA не пройдена. Спробуйте ще раз."
+msgstr "Перевірка reCAPTCHA не пройдена. Спробуйте ще раз."

@@ -411,3 +411,36 @@ msgstr ""
 
 msgid "Додати коментар"
 msgstr ""
+
+msgid "Comments & spam protection"
+msgstr ""
+
+msgid "Comment captcha type"
+msgstr ""
+
+msgid "Use a simple math challenge or Google reCAPTCHA for guest comments."
+msgstr ""
+
+msgid "Math question (built-in)"
+msgstr ""
+
+msgid "Google reCAPTCHA v2"
+msgstr ""
+
+msgid "reCAPTCHA site key"
+msgstr ""
+
+msgid "Required if reCAPTCHA is selected."
+msgstr ""
+
+msgid "reCAPTCHA secret key"
+msgstr ""
+
+msgid "Stored server-side for validation."
+msgstr ""
+
+msgid "Будь ласка, пройдіть перевірку, щоб залишити коментар."
+msgstr ""
+
+msgid "Перевірка reCAPTCHA не пройдена. Спробуйте ще раз."
+msgstr ""

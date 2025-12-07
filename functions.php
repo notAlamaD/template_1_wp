@@ -8,11 +8,11 @@ require_once get_template_directory() . '/schema.php';
 $fin_economy_includes = [
     'inc/helpers.php',
     'inc/setup.php',
+    'inc/comments.php',
     'inc/assets.php',
     'inc/customizer.php',
     'inc/demo-content.php',
     'inc/meta.php',
-    'inc/comments.php',
 ];
 
 foreach ($fin_economy_includes as $file) {

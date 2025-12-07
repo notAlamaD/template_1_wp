@@ -30,5 +30,12 @@ function fin_economy_assets() {
     );
 
     wp_add_inline_style('fin-economy-style', $custom_css);
+
+    if (fin_economy_get_captcha_type() === 'recaptcha' && comments_open() && is_singular()) {
+        $keys = fin_economy_get_recaptcha_keys();
+        if (!empty($keys['site_key'])) {
+            wp_enqueue_script('google-recaptcha', 'https://www.google.com/recaptcha/api.js', [], null, true);
+        }
+    }
 }
 add_action('wp_enqueue_scripts', 'fin_economy_assets');
