@@ -1,0 +1,454 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Fin Economy 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-15 00:00+0000\n"
+"PO-Revision-Date: 2025-02-15 00:00+0000\n"
+"Last-Translator: Auto Generated <translations@example.com>\n"
+"Language-Team: English\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: manual\n"
+"X-Domain: fin-economy\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Skip to content"
+msgstr "Skip to content"
+
+msgid "Пошук"
+msgstr "Search"
+
+msgid "Пошук..."
+msgstr "Search..."
+
+msgid "Toggle navigation"
+msgstr "Toggle navigation"
+
+msgid "Primary menu"
+msgstr "Primary menu"
+
+msgid "Головна"
+msgstr "Home"
+
+msgid "Матеріалів поки немає."
+msgstr "No posts yet."
+
+msgid "Читати →"
+msgstr "Read →"
+
+msgid "Quick highlights"
+msgstr "Quick highlights"
+
+msgid "Останні матеріали"
+msgstr "Latest articles"
+
+msgid "Публікацій поки немає."
+msgstr "No publications yet."
+
+msgid "Primary Menu"
+msgstr "Primary Menu"
+
+msgid "Footer Menu"
+msgstr "Footer Menu"
+
+msgid "Main Sidebar"
+msgstr "Main Sidebar"
+
+msgid "Right column for categories and popular posts."
+msgstr "Right column for categories and popular posts."
+
+msgid "Категорії"
+msgstr "Categories"
+
+msgid "Популярне"
+msgstr "Popular"
+
+msgid "Breadcrumbs"
+msgstr "Breadcrumbs"
+
+msgid "Поділитися новиною"
+msgstr "Share the news"
+
+msgid "Поділитися"
+msgstr "Share"
+
+msgid "Поділитися у Facebook"
+msgstr "Share on Facebook"
+
+msgid "Теги"
+msgstr "Tags"
+
+msgid "Поділитися у X (Twitter)"
+msgstr "Share on X (Twitter)"
+
+msgid "Поділитися у Telegram"
+msgstr "Share on Telegram"
+
+msgid "Поділитися у LinkedIn"
+msgstr "Share on LinkedIn"
+
+msgid "Ще по темі"
+msgstr "Related posts"
+
+msgid "404 — сторінку не знайдено"
+msgstr "404 — page not found"
+
+msgid "Сторінка, яку ви шукаєте, не існує або була переміщена."
+msgstr "The page you’re looking for doesn’t exist or has been moved."
+
+msgid "На головну"
+msgstr "Back to home"
+
+msgid "© 2025 «Фінанси та економія»."
+msgstr "© 2025 “Finance & Economy.”"
+
+msgid "Footer menu"
+msgstr "Footer menu"
+
+msgid "Social links"
+msgstr "Social links"
+
+msgid "Hero Block"
+msgstr "Hero Block"
+
+msgid "Featured post category"
+msgstr "Featured post category"
+
+msgid "Choose which category feeds the large hero article. Leave empty for the latest post from any category."
+msgstr "Choose which category feeds the large hero article. Leave empty for the latest post from any category."
+
+msgid "Quick accents category"
+msgstr "Quick accents category"
+
+msgid "Select a category for the smaller highlight cards. Falls back to the featured category when empty."
+msgstr "Select a category for the smaller highlight cards. Falls back to the featured category when empty."
+
+msgid "Number of quick accents"
+msgstr "Number of quick accents"
+
+msgid "Control how many smaller cards appear beside the hero (1–6)."
+msgstr "Control how many smaller cards appear beside the hero (1–6)."
+
+msgid "Hero background start"
+msgstr "Hero background start"
+
+msgid "Left/top gradient color for the hero block."
+msgstr "Left/top gradient color for the hero block."
+
+msgid "Hero background end"
+msgstr "Hero background end"
+
+msgid "Right/bottom gradient color for the hero block."
+msgstr "Right/bottom gradient color for the hero block."
+
+msgid "Hero text color"
+msgstr "Hero text color"
+
+msgid "Applies to hero headings, excerpts, and accent cards."
+msgstr "Applies to hero headings, excerpts, and accent cards."
+
+msgid "Header Styling"
+msgstr "Header Styling"
+
+msgid "Header background color"
+msgstr "Header background color"
+
+msgid "Header text color"
+msgstr "Header text color"
+
+msgid "Accent color"
+msgstr "Accent color"
+
+msgid "Button background color"
+msgstr "Button background color"
+
+msgid "Applies to primary buttons and hero CTAs."
+msgstr "Applies to primary buttons and hero CTAs."
+
+msgid "Button hover color"
+msgstr "Button hover color"
+
+msgid "Used for hover and focus states."
+msgstr "Used for hover and focus states."
+
+msgid "Button text color"
+msgstr "Button text color"
+
+msgid "Adjust label contrast for buttons sitewide."
+msgstr "Adjust label contrast for buttons sitewide."
+
+msgid "Footer"
+msgstr "Footer"
+
+msgid "Footer text"
+msgstr "Footer text"
+
+msgid "Footer background color"
+msgstr "Footer background color"
+
+msgid "Footer text color"
+msgstr "Footer text color"
+
+msgid "Facebook URL"
+msgstr "Facebook URL"
+
+msgid "X / Twitter URL"
+msgstr "X / Twitter URL"
+
+msgid "Instagram URL"
+msgstr "Instagram URL"
+
+msgid "LinkedIn URL"
+msgstr "LinkedIn URL"
+
+msgid "YouTube URL"
+msgstr "YouTube URL"
+
+msgid "Telegram URL"
+msgstr "Telegram URL"
+
+msgid "RSS feed URL"
+msgstr "RSS feed URL"
+
+msgid "Leave empty to hide the RSS icon."
+msgstr "Leave empty to hide the RSS icon."
+
+msgid "Custom scripts in <head>"
+msgstr "Custom scripts in <head>"
+
+msgid "Paste analytics or verification snippets. Avoid <script> tags with remote sources when possible."
+msgstr "Paste analytics or verification snippets. Avoid <script> tags with remote sources when possible."
+
+msgid "Demo Content"
+msgstr "Demo Content"
+
+msgid "Generate sample posts, pages, categories, and menus to preview the theme."
+msgstr "Generate sample posts, pages, categories, and menus to preview the theme."
+
+msgid "Demo content created. You can now assign menus and preview the homepage."
+msgstr "Demo content created. You can now assign menus and preview the homepage."
+
+msgid "Demo content could not be created. Please try again."
+msgstr "Demo content could not be created. Please try again."
+
+msgid "Create demo content"
+msgstr "Create demo content"
+
+msgid "You do not have permission to import demo content."
+msgstr "You do not have permission to import demo content."
+
+msgid "Комуналка"
+msgstr "Utilities"
+
+msgid "Тарифи"
+msgstr "Tariffs"
+
+msgid "Економія"
+msgstr "Savings"
+
+msgid "Фінанси"
+msgstr "Finance"
+
+msgid "Інвестиції"
+msgstr "Investments"
+
+msgid "Політика"
+msgstr "Policy"
+
+msgid "Про сайт"
+msgstr "About"
+
+msgid "Реклама"
+msgstr "Advertising"
+
+msgid "Статична сторінка-заглушка для демонстрації теми."
+msgstr "Static placeholder page for demoing the theme."
+
+msgid "Як знизити рахунки за комунальні послуги цієї зими"
+msgstr "How to cut utility bills this winter"
+
+msgid "Підготували огляд простих кроків, які реально допомагають платити менше: від налаштування бойлера до вибору енергоощадних ламп."
+msgstr "A roundup of simple steps that genuinely reduce costs: from tuning your boiler to choosing energy-saving bulbs."
+
+msgid "Розповідаємо, як слідкувати за нічними тарифами, що поставити на таймер, а також як перевірити, чи не витрачає ваша техніка більше, ніж заявлено."
+msgstr "We explain how to track night tariffs, what to put on a timer, and how to check if your appliances consume more than stated."
+
+msgid "Окремо пояснюємо, які компенсації діють для родин та як подати заявку онлайн без черг."
+msgstr "We also outline which compensations families can claim and how to apply online without queues."
+
+msgid "Нове коригування тарифів: що зміниться з наступного місяця"
+msgstr "New tariff adjustment: what changes next month"
+
+msgid "Коротко про рішення регулятора: які послуги подорожчають, де тарифи лишаться без змін і як це вплине на середню квитанцію."
+msgstr "A quick look at the regulator’s decision: which services will rise, where rates stay flat, and how it affects the average bill."
+
+msgid "Ми зібрали коментарі експертів та підготували таблицю з ключовими цифрами, щоб ви могли спланувати бюджет заздалегідь."
+msgstr "We gathered expert commentary and prepared a table of key figures so you can plan your budget in advance."
+
+msgid "Також нагадуємо про програми субсидій та пільг, що діють у вашому регіоні."
+msgstr "We also remind you about subsidy and benefit programs available in your region."
+
+msgid "5 звичок, які допоможуть заощадити щодня"
+msgstr "5 habits that help you save daily"
+
+msgid "Зміни у побуті не обовʼязково складні: сортуємо покупки за пріоритетами, плануємо харчування на тиждень та користуємося кешбеком обережно."
+msgstr "Household changes aren’t hard: prioritize purchases, plan weekly meals, and use cashback carefully."
+
+msgid "Ділимося прикладами, як відмовитися від імпульсивних витрат і при цьому не втратити в комфорті."
+msgstr "Examples on cutting impulsive spending without losing comfort."
+
+msgid "Додаємо чекліст для завантаження, щоб впровадити ці звички поступово."
+msgstr "Includes a downloadable checklist to adopt these habits gradually."
+
+msgid "Огляд банківських депозитів: ставки та бонуси"
+msgstr "Bank deposit overview: rates and bonuses"
+
+msgid "Порівняли пропозиції найбільших банків: де є бонус за перше розміщення, а де — підвищена ставка на короткий термін."
+msgstr "We compared major banks’ offers: where you get a first-deposit bonus and where short-term rates are higher."
+
+msgid "Звертаємо увагу на умови дострокового розірвання, ліміти гарантування та додаткові комісії."
+msgstr "We note early termination terms, guarantee limits, and extra fees."
+
+msgid "Розповідаємо, як перевірити надійність банку і що робити зі старими депозитними договорами."
+msgstr "How to check a bank’s reliability and what to do with old deposit agreements."
+
+msgid "Куди інвестують українці у 2025 році"
+msgstr "Where Ukrainians invest in 2025"
+
+msgid "Порівнюємо популярні інструменти: державні облігації, ETF та ринок оренди нерухомості."
+msgstr "We compare popular tools: government bonds, ETFs, and the rental property market."
+
+msgid "Розглядаємо приклади портфелів для різних рівнів ризику й пояснюємо, як диверсифікація зменшує втрати."
+msgstr "Portfolio examples for different risk levels and how diversification reduces losses."
+
+msgid "Є окремий блок про податки та що зміниться після 1 липня."
+msgstr "Includes a section on taxes and what changes after July 1."
+
+msgid "Як працює індекс споживчих цін і чому він важливий"
+msgstr "How the consumer price index works and why it matters"
+
+msgid "Пояснюємо, як статистики рахують CPI, які кошики беруть за основу та як часто оновлюють методологію."
+msgstr "We explain how statisticians calculate CPI, which baskets they use, and how often the methodology is updated."
+
+msgid "Наводимо приклади впливу інфляції на кредити, заощадження та зарплати."
+msgstr "Examples of how inflation affects loans, savings, and salaries."
+
+msgid "Додаємо графік динаміки за останні роки та підказуємо, де стежити за офіційними даними."
+msgstr "Includes a chart of recent trends and where to track official data."
+
+msgid "Головне меню"
+msgstr "Main menu"
+
+msgid "Меню футера"
+msgstr "Footer menu"
+
+msgid "Останні публікації"
+msgstr "Latest posts"
+
+msgid "Tags"
+msgstr "Tags"
+
+msgid "No tags found."
+msgstr "No tags found."
+
+msgid "No posts found."
+msgstr "No posts found."
+
+msgid "%s post"
+msgid_plural "%s posts"
+msgstr[0] "%s post"
+msgstr[1] "%s posts"
+
+msgid "Previous"
+msgstr "Previous"
+
+msgid "Next"
+msgstr "Next"
+
+msgid "Коментарі"
+msgstr "Comments"
+
+msgid "Відповідь на %s"
+msgstr "Reply to %s"
+
+msgid "Скасувати відповідь"
+msgstr "Cancel reply"
+
+msgid "Надіслати"
+msgstr "Submit"
+
+msgid "Коментар"
+msgstr "Comment"
+
+msgid "Ім’я"
+msgstr "Name"
+
+msgid "Підтвердіть, що ви людина"
+msgstr "Please verify you are human"
+
+msgid "Скільки буде %1$s + %2$s?"
+msgstr "What is %1$s + %2$s?"
+
+msgid "Будь ласка, розв’яжіть приклад, щоб залишити коментар."
+msgstr "Please solve the equation to post a comment."
+
+msgid "Невдала перевірка безпеки. Спробуйте ще раз."
+msgstr "Security check failed. Please try again."
+
+msgid "Перевірка безпеки не пройдена. Оновіть сторінку та спробуйте знову."
+msgstr "Security verification failed. Refresh the page and try again."
+
+msgid "Неправильна відповідь на приклад. Спробуйте ще раз."
+msgstr "Incorrect answer to the equation. Please try again."
+
+msgid "Відповісти"
+msgstr "Reply"
+
+msgid "%s коментар"
+msgid_plural "%s коментарі(в)"
+msgstr[0] "%s comment"
+msgstr[1] "%s comments"
+
+msgid "Попередні"
+msgstr "Previous"
+
+msgid "Наступні"
+msgstr "Next"
+
+msgid "Додати коментар"
+msgstr "Add a comment"
+
+msgid "Comments & spam protection"
+msgstr "Comments & spam protection"
+
+msgid "Comment captcha type"
+msgstr "Comment captcha type"
+
+msgid "Use a simple math challenge or Google reCAPTCHA for guest comments."
+msgstr "Use a simple math challenge or Google reCAPTCHA for guest comments."
+
+msgid "Math question (built-in)"
+msgstr "Math question (built-in)"
+
+msgid "Google reCAPTCHA v2"
+msgstr "Google reCAPTCHA v2"
+
+msgid "reCAPTCHA site key"
+msgstr "reCAPTCHA site key"
+
+msgid "Required if reCAPTCHA is selected."
+msgstr "Required if reCAPTCHA is selected."
+
+msgid "reCAPTCHA secret key"
+msgstr "reCAPTCHA secret key"
+
+msgid "Stored server-side for validation."
+msgstr "Stored server-side for validation."
+
+msgid "Будь ласка, пройдіть перевірку, щоб залишити коментар."
+msgstr "Please complete the check to leave a comment."
+
+msgid "Перевірка reCAPTCHA не пройдена. Спробуйте ще раз."
+msgstr "reCAPTCHA verification failed. Please try again."

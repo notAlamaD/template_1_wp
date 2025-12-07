@@ -1,0 +1,449 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Fin Economy 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-15 00:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: manual\n"
+"X-Domain: fin-economy\n"
+
+msgid "Skip to content"
+msgstr ""
+
+msgid "Пошук"
+msgstr ""
+
+msgid "Пошук..."
+msgstr ""
+
+msgid "Toggle navigation"
+msgstr ""
+
+msgid "Primary menu"
+msgstr ""
+
+msgid "Головна"
+msgstr ""
+
+msgid "Матеріалів поки немає."
+msgstr ""
+
+msgid "Читати →"
+msgstr ""
+
+msgid "Quick highlights"
+msgstr ""
+
+msgid "Останні матеріали"
+msgstr ""
+
+msgid "Публікацій поки немає."
+msgstr ""
+
+msgid "Primary Menu"
+msgstr ""
+
+msgid "Footer Menu"
+msgstr ""
+
+msgid "Main Sidebar"
+msgstr ""
+
+msgid "Right column for categories and popular posts."
+msgstr ""
+
+msgid "Категорії"
+msgstr ""
+
+msgid "Популярне"
+msgstr ""
+
+msgid "Breadcrumbs"
+msgstr ""
+
+msgid "Поділитися новиною"
+msgstr ""
+
+msgid "Поділитися"
+msgstr ""
+
+msgid "Поділитися у Facebook"
+msgstr ""
+
+msgid "Теги"
+msgstr ""
+
+msgid "Поділитися у X (Twitter)"
+msgstr ""
+
+msgid "Поділитися у Telegram"
+msgstr ""
+
+msgid "Поділитися у LinkedIn"
+msgstr ""
+
+msgid "Ще по темі"
+msgstr ""
+
+msgid "404 — сторінку не знайдено"
+msgstr ""
+
+msgid "Сторінка, яку ви шукаєте, не існує або була переміщена."
+msgstr ""
+
+msgid "На головну"
+msgstr ""
+
+msgid "© 2025 «Фінанси та економія»."
+msgstr ""
+
+msgid "Footer menu"
+msgstr ""
+
+msgid "Social links"
+msgstr ""
+
+msgid "Hero Block"
+msgstr ""
+
+msgid "Featured post category"
+msgstr ""
+
+msgid "Choose which category feeds the large hero article. Leave empty for the latest post from any category."
+msgstr ""
+
+msgid "Quick accents category"
+msgstr ""
+
+msgid "Select a category for the smaller highlight cards. Falls back to the featured category when empty."
+msgstr ""
+
+msgid "Number of quick accents"
+msgstr ""
+
+msgid "Control how many smaller cards appear beside the hero (1–6)."
+msgstr ""
+
+msgid "Hero background start"
+msgstr ""
+
+msgid "Left/top gradient color for the hero block."
+msgstr ""
+
+msgid "Hero background end"
+msgstr ""
+
+msgid "Right/bottom gradient color for the hero block."
+msgstr ""
+
+msgid "Hero text color"
+msgstr ""
+
+msgid "Applies to hero headings, excerpts, and accent cards."
+msgstr ""
+
+msgid "Header Styling"
+msgstr ""
+
+msgid "Header background color"
+msgstr ""
+
+msgid "Header text color"
+msgstr ""
+
+msgid "Accent color"
+msgstr ""
+
+msgid "Button background color"
+msgstr ""
+
+msgid "Applies to primary buttons and hero CTAs."
+msgstr ""
+
+msgid "Button hover color"
+msgstr ""
+
+msgid "Used for hover and focus states."
+msgstr ""
+
+msgid "Button text color"
+msgstr ""
+
+msgid "Adjust label contrast for buttons sitewide."
+msgstr ""
+
+msgid "Footer"
+msgstr ""
+
+msgid "Footer text"
+msgstr ""
+
+msgid "Footer background color"
+msgstr ""
+
+msgid "Footer text color"
+msgstr ""
+
+msgid "Facebook URL"
+msgstr ""
+
+msgid "X / Twitter URL"
+msgstr ""
+
+msgid "Instagram URL"
+msgstr ""
+
+msgid "LinkedIn URL"
+msgstr ""
+
+msgid "YouTube URL"
+msgstr ""
+
+msgid "Telegram URL"
+msgstr ""
+
+msgid "RSS feed URL"
+msgstr ""
+
+msgid "Leave empty to hide the RSS icon."
+msgstr ""
+
+msgid "Custom scripts in <head>"
+msgstr ""
+
+msgid "Paste analytics or verification snippets. Avoid <script> tags with remote sources when possible."
+msgstr ""
+
+msgid "Demo Content"
+msgstr ""
+
+msgid "Generate sample posts, pages, categories, and menus to preview the theme."
+msgstr ""
+
+msgid "Demo content created. You can now assign menus and preview the homepage."
+msgstr ""
+
+msgid "Demo content could not be created. Please try again."
+msgstr ""
+
+msgid "Create demo content"
+msgstr ""
+
+msgid "You do not have permission to import demo content."
+msgstr ""
+
+msgid "Комуналка"
+msgstr ""
+
+msgid "Тарифи"
+msgstr ""
+
+msgid "Економія"
+msgstr ""
+
+msgid "Фінанси"
+msgstr ""
+
+msgid "Інвестиції"
+msgstr ""
+
+msgid "Політика"
+msgstr ""
+
+msgid "Про сайт"
+msgstr ""
+
+msgid "Реклама"
+msgstr ""
+
+msgid "Статична сторінка-заглушка для демонстрації теми."
+msgstr ""
+
+msgid "Як знизити рахунки за комунальні послуги цієї зими"
+msgstr ""
+
+msgid "Підготували огляд простих кроків, які реально допомагають платити менше: від налаштування бойлера до вибору енергоощадних ламп."
+msgstr ""
+
+msgid "Розповідаємо, як слідкувати за нічними тарифами, що поставити на таймер, а також як перевірити, чи не витрачає ваша техніка більше, ніж заявлено."
+msgstr ""
+
+msgid "Окремо пояснюємо, які компенсації діють для родин та як подати заявку онлайн без черг."
+msgstr ""
+
+msgid "Нове коригування тарифів: що зміниться з наступного місяця"
+msgstr ""
+
+msgid "Коротко про рішення регулятора: які послуги подорожчають, де тарифи лишаться без змін і як це вплине на середню квитанцію."
+msgstr ""
+
+msgid "Ми зібрали коментарі експертів та підготували таблицю з ключовими цифрами, щоб ви могли спланувати бюджет заздалегідь."
+msgstr ""
+
+msgid "Також нагадуємо про програми субсидій та пільг, що діють у вашому регіоні."
+msgstr ""
+
+msgid "5 звичок, які допоможуть заощадити щодня"
+msgstr ""
+
+msgid "Зміни у побуті не обовʼязково складні: сортуємо покупки за пріоритетами, плануємо харчування на тиждень та користуємося кешбеком обережно."
+msgstr ""
+
+msgid "Ділимося прикладами, як відмовитися від імпульсивних витрат і при цьому не втратити в комфорті."
+msgstr ""
+
+msgid "Додаємо чекліст для завантаження, щоб впровадити ці звички поступово."
+msgstr ""
+
+msgid "Огляд банківських депозитів: ставки та бонуси"
+msgstr ""
+
+msgid "Порівняли пропозиції найбільших банків: де є бонус за перше розміщення, а де — підвищена ставка на короткий термін."
+msgstr ""
+
+msgid "Звертаємо увагу на умови дострокового розірвання, ліміти гарантування та додаткові комісії."
+msgstr ""
+
+msgid "Розповідаємо, як перевірити надійність банку і що робити зі старими депозитними договорами."
+msgstr ""
+
+msgid "Куди інвестують українці у 2025 році"
+msgstr ""
+
+msgid "Порівнюємо популярні інструменти: державні облігації, ETF та ринок оренди нерухомості."
+msgstr ""
+
+msgid "Розглядаємо приклади портфелів для різних рівнів ризику й пояснюємо, як диверсифікація зменшує втрати."
+msgstr ""
+
+msgid "Є окремий блок про податки та що зміниться після 1 липня."
+msgstr ""
+
+msgid "Як працює індекс споживчих цін і чому він важливий"
+msgstr ""
+
+msgid "Пояснюємо, як статистики рахують CPI, які кошики беруть за основу та як часто оновлюють методологію."
+msgstr ""
+
+msgid "Наводимо приклади впливу інфляції на кредити, заощадження та зарплати."
+msgstr ""
+
+msgid "Додаємо графік динаміки за останні роки та підказуємо, де стежити за офіційними даними."
+msgstr ""
+
+msgid "Головне меню"
+msgstr ""
+
+msgid "Меню футера"
+msgstr ""
+
+msgid "Останні публікації"
+msgstr ""
+
+msgid "Tags"
+msgstr ""
+
+msgid "No tags found."
+msgstr ""
+
+msgid "No posts found."
+msgstr ""
+
+msgid "%s post"
+msgid_plural "%s posts"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Previous"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Коментарі"
+msgstr ""
+
+msgid "Відповідь на %s"
+msgstr ""
+
+msgid "Скасувати відповідь"
+msgstr ""
+
+msgid "Надіслати"
+msgstr ""
+
+msgid "Коментар"
+msgstr ""
+
+msgid "Ім’я"
+msgstr ""
+
+msgid "Підтвердіть, що ви людина"
+msgstr ""
+
+msgid "Скільки буде %1$s + %2$s?"
+msgstr ""
+
+msgid "Будь ласка, розв’яжіть приклад, щоб залишити коментар."
+msgstr ""
+
+msgid "Невдала перевірка безпеки. Спробуйте ще раз."
+msgstr ""
+
+msgid "Перевірка безпеки не пройдена. Оновіть сторінку та спробуйте знову."
+msgstr ""
+
+msgid "Неправильна відповідь на приклад. Спробуйте ще раз."
+msgstr ""
+
+msgid "Відповісти"
+msgstr ""
+
+msgid "%s коментар"
+msgid_plural "%s коментарі(в)"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Попередні"
+msgstr ""
+
+msgid "Наступні"
+msgstr ""
+
+msgid "Додати коментар"
+msgstr ""
+
+msgid "Comments & spam protection"
+msgstr ""
+
+msgid "Comment captcha type"
+msgstr ""
+
+msgid "Use a simple math challenge or Google reCAPTCHA for guest comments."
+msgstr ""
+
+msgid "Math question (built-in)"
+msgstr ""
+
+msgid "Google reCAPTCHA v2"
+msgstr ""
+
+msgid "reCAPTCHA site key"
+msgstr ""
+
+msgid "Required if reCAPTCHA is selected."
+msgstr ""
+
+msgid "reCAPTCHA secret key"
+msgstr ""
+
+msgid "Stored server-side for validation."
+msgstr ""
+
+msgid "Будь ласка, пройдіть перевірку, щоб залишити коментар."
+msgstr ""
+
+msgid "Перевірка reCAPTCHA не пройдена. Спробуйте ще раз."
+msgstr ""
