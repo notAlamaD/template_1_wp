@@ -338,3 +338,23 @@ msgstr ""
 
 msgid "Останні публікації"
 msgstr ""
+
+msgid "Tags"
+msgstr ""
+
+msgid "No tags found."
+msgstr ""
+
+msgid "No posts found."
+msgstr ""
+
+msgid "%s post"
+msgid_plural "%s posts"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Previous"
+msgstr ""
+
+msgid "Next"
+msgstr ""

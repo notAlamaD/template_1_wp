@@ -343,3 +343,24 @@ msgstr "Меню подвала"
 
 msgid "Останні публікації"
 msgstr "Последние публикации"
+
+msgid "Tags"
+msgstr "Теги"
+
+msgid "No tags found."
+msgstr "Теги не найдены."
+
+msgid "No posts found."
+msgstr "Записей не найдено."
+
+msgid "%s post"
+msgid_plural "%s posts"
+msgstr[0] "%s пост"
+msgstr[1] "%s поста"
+msgstr[2] "%s постов"
+
+msgid "Previous"
+msgstr "Предыдущая"
+
+msgid "Next"
+msgstr "Следующая"

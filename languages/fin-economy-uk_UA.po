@@ -343,3 +343,24 @@ msgstr "Меню футера"
 
 msgid "Останні публікації"
 msgstr "Останні публікації"
+
+msgid "Tags"
+msgstr "Теги"
+
+msgid "No tags found."
+msgstr "Тегів не знайдено."
+
+msgid "No posts found."
+msgstr "Записів не знайдено."
+
+msgid "%s post"
+msgid_plural "%s posts"
+msgstr[0] "%s допис"
+msgstr[1] "%s дописи"
+msgstr[2] "%s дописів"
+
+msgid "Previous"
+msgstr "Попередня"
+
+msgid "Next"
+msgstr "Наступна"

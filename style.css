@@ -332,6 +332,23 @@ img { max-width: 100%; height: auto; display: block; }
 .feed-title { margin: 2px 0 6px; font-size: 1.05rem; }
 .feed-excerpt { margin: 0; color: #475569; }
 
+.news-feed-item { grid-template-columns: 150px 1fr; align-items: center; }
+.news-feed-item .feed-thumb { height: 110px; }
+
+.tag-archive { margin-top: 18px; display: grid; gap: 14px; }
+.tag-archive-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+.tag-card { border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px 14px; background: #ffffff; display: grid; gap: 6px; text-decoration: none; color: #0f172a; box-shadow: 0 6px 12px rgba(15, 23, 42, 0.06); transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+.tag-card:hover, .tag-card:focus-visible { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(15, 23, 42, 0.1); border-color: var(--button-bg, #2563eb); outline: none; }
+.tag-card-name { font-weight: 700; font-size: 1rem; }
+.tag-card-meta { color: #475569; font-size: 0.95rem; }
+
+.pagination { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.pagination .page-numbers { display: inline-flex; align-items: center; justify-content: center; padding: 8px 12px; border-radius: 10px; border: 1px solid #e2e8f0; background: #ffffff; color: #0f172a; text-decoration: none; min-width: 36px; text-align: center; transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease; }
+.pagination .page-numbers.current { background: var(--button-bg, #2563eb); color: var(--button-text, #ffffff); border-color: var(--button-bg, #2563eb); }
+.pagination .page-numbers:hover, .pagination .page-numbers:focus-visible { border-color: var(--button-bg, #2563eb); transform: translateY(-1px); outline: none; }
+
+.empty-text { margin: 0; color: #475569; }
+
 .section-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
 .section-subtitle { margin: 0 0 8px; font-size: 1.05rem; }
 .section-list { list-style: none; padding: 0; margin: 6px 0 0; display: grid; gap: 10px; }

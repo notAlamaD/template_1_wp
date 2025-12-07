@@ -343,3 +343,23 @@ msgstr "Footer menu"
 
 msgid "Останні публікації"
 msgstr "Latest posts"
+
+msgid "Tags"
+msgstr "Tags"
+
+msgid "No tags found."
+msgstr "No tags found."
+
+msgid "No posts found."
+msgstr "No posts found."
+
+msgid "%s post"
+msgid_plural "%s posts"
+msgstr[0] "%s post"
+msgstr[1] "%s posts"
+
+msgid "Previous"
+msgstr "Previous"
+
+msgid "Next"
+msgstr "Next"
