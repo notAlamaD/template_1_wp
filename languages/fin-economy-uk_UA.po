@@ -206,6 +206,9 @@ msgstr "Посилання LinkedIn"
 msgid "YouTube URL"
 msgstr "Посилання YouTube"
 
+msgid "Telegram URL"
+msgstr "Посилання Telegram"
+
 msgid "RSS feed URL"
 msgstr "URL RSS-стрічки"
 

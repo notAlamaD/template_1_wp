@@ -201,6 +201,9 @@ msgstr ""
 msgid "YouTube URL"
 msgstr ""
 
+msgid "Telegram URL"
+msgstr ""
+
 msgid "RSS feed URL"
 msgstr ""
 

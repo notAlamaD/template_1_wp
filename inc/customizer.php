@@ -442,6 +442,7 @@ function fin_economy_customize_register($wp_customize) {
         'instagram' => __('Instagram URL', 'fin-economy'),
         'linkedin'  => __('LinkedIn URL', 'fin-economy'),
         'youtube'   => __('YouTube URL', 'fin-economy'),
+        'telegram'  => __('Telegram URL', 'fin-economy'),
     ];
 
     foreach ($social_networks as $key => $label) {
