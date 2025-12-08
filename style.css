@@ -264,10 +264,15 @@ img { max-width: 100%; height: auto; display: block; }
 .post-tags { margin-top: 16px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .post-tags-label { font-weight: 700; color: #0f172a; }
 .post-tags-list { display: flex; gap: 8px; flex-wrap: wrap; }
-.tag-chip { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; background: #f8fafc; color: #0f172a; border: 1px solid #e2e8f0; text-decoration: none; font-weight: 700; transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+.category-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.tag-chip,
+.category-chip { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; background: #f8fafc; color: #0f172a; border: 1px solid #e2e8f0; text-decoration: none; font-weight: 700; transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
 .tag-chip:hover,
-.tag-chip:focus-visible { transform: translateY(-1px); border-color: var(--button-bg, #2563eb); box-shadow: 0 8px 18px rgba(37, 99, 235, 0.16); outline: none; }
-.tag-chip-count { color: #475569; font-size: 0.92rem; font-weight: 600; }
+.tag-chip:focus-visible,
+.category-chip:hover,
+.category-chip:focus-visible { transform: translateY(-1px); border-color: var(--button-bg, #2563eb); box-shadow: 0 8px 18px rgba(37, 99, 235, 0.16); outline: none; }
+.tag-chip-count,
+.category-chip-count { color: #475569; font-size: 0.92rem; font-weight: 600; }
 
 .related-posts { margin-top: 28px; }
 .related-posts h2 { margin: 0 0 12px; }

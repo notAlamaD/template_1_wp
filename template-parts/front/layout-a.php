@@ -137,8 +137,8 @@ function fin_economy_render_category_block() {
     $categories = get_categories([
         'orderby'    => 'count',
         'order'      => 'DESC',
-        'number'     => 6,
-        'hide_empty' => false,
+        'number'     => 12,
+        'hide_empty' => true,
     ]);
     if (empty($categories)) {
         return;
@@ -148,11 +148,11 @@ function fin_economy_render_category_block() {
         <header class="section-heading">
             <h2><?php esc_html_e('По категоріях', 'fin-economy'); ?></h2>
         </header>
-        <div class="category-grid">
+        <div class="category-chips">
             <?php foreach ($categories as $category) : ?>
-                <a class="category-card" href="<?php echo esc_url(get_category_link($category)); ?>">
-                    <span class="category-name"><?php echo esc_html($category->name); ?></span>
-                    <span class="category-count"><?php echo esc_html($category->count); ?> <?php esc_html_e('матеріалів', 'fin-economy'); ?></span>
+                <a class="category-chip" href="<?php echo esc_url(get_category_link($category)); ?>">
+                    <span class="category-chip-name"><?php echo esc_html($category->name); ?></span>
+                    <span class="category-chip-count"><?php echo esc_html($category->count); ?> <?php esc_html_e('матеріалів', 'fin-economy'); ?></span>
                 </a>
             <?php endforeach; ?>
         </div>
